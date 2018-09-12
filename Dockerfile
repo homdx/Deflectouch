@@ -66,7 +66,7 @@ USER ${USER}
 
 COPY . .
 
-RUN buildozer android debug || /bin/true
+RUN buildozer init && buildozer android debug || /bin/true
 
 CMD tail -f /var/log/faillog
 
